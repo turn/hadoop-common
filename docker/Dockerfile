@@ -1,10 +1,10 @@
-FROM centos:7
+FROM centos:6
 
 # Build environment for hadoop-common 
 # need java7, c++, mvn and protoc 2.5.0
 
 USER root 
-RUN yum -y update && yum -y install which java-1.7.0-openjdk-devel gcc-c++ wget make && yum clean all
+RUN yum -y install which java-1.7.0-openjdk-devel gcc-c++ wget make && yum clean all
 
 
 RUN cd /usr/local && \
