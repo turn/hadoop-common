@@ -37,7 +37,7 @@ import java.util.Map;
 import java.util.TreeSet;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
+import com.cloudera.com.google.common.base.Optional;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.classification.InterfaceAudience;
