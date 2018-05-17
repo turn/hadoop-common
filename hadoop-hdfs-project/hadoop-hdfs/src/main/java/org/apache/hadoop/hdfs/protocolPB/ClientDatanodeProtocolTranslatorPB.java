@@ -26,7 +26,7 @@ import java.util.Map;
 
 import javax.net.SocketFactory;
 
-import com.google.common.base.Optional;
+import com.cloudera.com.google.common.base.Optional;
 import com.google.common.collect.Maps;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
