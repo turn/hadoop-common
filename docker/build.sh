@@ -5,8 +5,6 @@
 export M2_HOME=/usr/local/apache-maven
 export PATH=${M2_HOME}/bin:${PATH}
 
-cat /home/jenkins/.m2/settings.xml 
-
 cd /hadoop-common
 mvn --settings /home/jenkins/.m2/settings.xml clean deploy -Pdist -DskipTests -Dtar
 mvn --settings /home/jenkins/.m2/settings.xml clean -Pdist -DskipTests -Dtar
