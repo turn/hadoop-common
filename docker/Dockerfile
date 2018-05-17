@@ -8,11 +8,11 @@ RUN yum -y install which java-1.7.0-openjdk-devel gcc-c++ wget make && yum clean
 
 
 RUN cd /usr/local && \
-    wget http://www-us.apache.org/dist/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.tar.gz && \
+    wget http://www-us.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz && \
     wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.tar.gz && \
-    tar -xf apache-maven-3.3.9-bin.tar.gz && rm -f apache-maven-3.3.9-bin.tar.gz && \
+    tar -xf apache-maven-3.1.1-bin.tar.gz && rm -f apache-maven-3.1.1-bin.tar.gz && \
     tar -xf protobuf-2.5.0.tar.gz && rm -f protobuf-2.5.0.tar.gz && \
-    mv apache-maven-3.3.9/ apache-maven/ && \
+    mv apache-maven-3.1.1/ apache-maven/ && \
     cd protobuf-2.5.0/ && ./configure && make install 
 
 
