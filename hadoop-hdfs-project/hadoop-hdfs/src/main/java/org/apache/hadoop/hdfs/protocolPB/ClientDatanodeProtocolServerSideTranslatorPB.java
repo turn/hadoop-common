@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.google.common.base.Optional;
+import com.cloudera.com.google.common.base.Optional;
 import org.apache.hadoop.classification.InterfaceAudience;
 import org.apache.hadoop.conf.ReconfigurationTaskStatus;
 import org.apache.hadoop.conf.ReconfigurationUtil.PropertyChange;
