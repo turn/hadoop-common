@@ -40,6 +40,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   </dependencyManagement>
 
   <distributionManagement>
+    <repository>
+      <id>turn</id>
+      <url>http://maven.turn.com/content/repositories/turn</url>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>snapshots</id>
+      <name>Turn internal Maven repository for snapshots</name>
+      <url>http://maven.turn.com/content/repositories/snapshots</url>
+      <layout>default</layout>
+    </snapshotRepository>
     <site>
       <id>apache.website</id>
       <url>scpexe://people.apache.org/www/hadoop.apache.org/docs/r${project.version}</url>
