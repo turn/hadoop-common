@@ -1,11 +1,14 @@
 #!/bin/bash 
 
-# Apache Maven Environment Variables
-# MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
-export M2_HOME=/usr/local/apache-maven
-export PATH=${M2_HOME}/bin:${PATH}
+
+DIR=$(dirname $0)
+. $DIR/setup.sh 
 
 cd /hadoop-common
-mvn --settings /home/jenkins/.m2/settings.xml clean deploy -Pdist -DskipTests -Dtar
-mvn --settings /home/jenkins/.m2/settings.xml clean -Pdist -DskipTests -Dtar
+mvn --settings /home/jenkins/.m2/settings.xml clean install -Pdist -DskipTests -Dtar -Dturn.version="turn-$TURN_VER"
+
+$DIR/repack.sh 
+
+mvn --settings /home/jenkins/.m2/settings.xml deploy -Pdist -DskipTests -Dtar -Dturn.version="turn-$TURN_VER"
+#mvn --settings /home/jenkins/.m2/settings.xml clean -Pdist -DskipTests -Dtar
 

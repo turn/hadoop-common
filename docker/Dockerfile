@@ -18,7 +18,7 @@ RUN cd /usr/local && \
 
 RUN groupadd --gid 516 jenkins && useradd -m -d /home/jenkins -g jenkins --uid 516 jenkins
 
-ADD build.sh /home/jenkins/
+ADD *.sh /home/jenkins/
 RUN chown jenkins:jenkins /home/jenkins/build.sh && chmod u+x /home/jenkins/build.sh 
 
 CMD ["tail", "-f", "/dev/null"]

@@ -91,6 +91,7 @@ class LocalDistributedCacheManager {
     Map<String, LocalResource> localResources = 
       new LinkedHashMap<String, LocalResource>();
     MRApps.setupDistributedCache(conf, localResources);
+    // Generating unique numbers for FSDownload.
 
     // Find which resources are to be put on the local classpath
     Map<String, Path> classpaths = new HashMap<String, Path>();
@@ -123,7 +124,7 @@ class LocalDistributedCacheManager {
       Map<LocalResource, Future<Path>> resourcesToPaths = Maps.newHashMap();
       for (LocalResource resource : localResources.values()) {
         Path destPathForDownload = new Path(destPath,
-                jobId.toString() + "_" + UUID.randomUUID().toString());
+            jobId.toString() + "_" + UUID.randomUUID().toString());
         Callable<Path> download =
             new FSDownload(localFSFileContext, ugi, conf, destPathForDownload,
                 resource);
