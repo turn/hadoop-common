@@ -20,12 +20,12 @@
   <parent>
     <groupId>org.apache.hadoop</groupId>
     <artifactId>hadoop-project</artifactId>
-    <version>2.6.0-cdh5.5.1-turn-0.1</version>
+    <version>2.6.0-cdh5.5.1-${turn.version}</version>
     <relativePath>../hadoop-project</relativePath>
   </parent>
   <groupId>org.apache.hadoop</groupId>
   <artifactId>hadoop-dist</artifactId>
-  <version>2.6.0-cdh5.5.1-turn-0.1</version>
+  <version>2.6.0-cdh5.5.1-${turn.version}</version>
   <description>Apache Hadoop Distribution</description>
   <name>Apache Hadoop Distribution</name>
   <packaging>jar</packaging>
@@ -83,7 +83,7 @@
           <configuration>
             <artifacts>
               <artifact>
-                <file>target/hadoop-${project.version}.tar.gz</file>
+                <file>../hadoop-${project.version}.tar.gz</file>
                 <type>tar.gz</type>
               </artifact>
             </artifacts>
