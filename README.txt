@@ -1,3 +1,15 @@
+Apr 17, 2019 - Sandy Sim
+This is a hacked version of 2.6.0-cdh5.16.1 which has a backport of MAPREDUCE-6441.011
+We needed this to fix an instability in our datamine medium test framework 
+(due to running tests in parallel and the referenced bug which causes tmp files 
+to get the same name if tests are started at the same instant)
+
+The change tries to patch the whole hadoop-common tarball, but we only needed 
+org.apache.hadoop:hadoop-mapreduce-client-common:2.6.0-cdh5.16.1-turn-0.1
+
+so I changed the build script to only deploy from hadoop-mapreduce-project
+
+
 For the latest information about Hadoop, please visit our website at:
 
    http://hadoop.apache.org/core/
